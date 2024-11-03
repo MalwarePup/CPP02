@@ -11,14 +11,15 @@ private:
 	static const int _fractionalBits = 8;
 public:
 	Fixed();
-	Fixed(const Fixed &rhs);
 	Fixed(const float value);
 	Fixed(const int value);
+	Fixed(const Fixed &rhs);
 	Fixed &operator=(const Fixed &rhs);
 	~Fixed();
 
 	int getRawBits() const;
 	void setRawBits(int const raw);
+
 	float toFloat() const;
 	int toInt() const;
 
