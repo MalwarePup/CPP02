@@ -52,52 +52,52 @@ int Fixed::toInt() const
 	return _rawBits >> _fractionalBits;
 }
 
-bool Fixed::operator>(const Fixed & rhs) const
+bool Fixed::operator>(const Fixed &rhs) const
 {
 	return this->_rawBits > rhs._rawBits;
 }
 
-bool Fixed::operator<(const Fixed & rhs) const
+bool Fixed::operator<(const Fixed &rhs) const
 {
 	return this->_rawBits < rhs._rawBits;
 }
 
-bool Fixed::operator>=(const Fixed & rhs) const
+bool Fixed::operator>=(const Fixed &rhs) const
 {
 	return this->_rawBits >= rhs._rawBits;
 }
 
-bool Fixed::operator<=(const Fixed & rhs) const
+bool Fixed::operator<=(const Fixed &rhs) const
 {
 	return this->_rawBits <= rhs._rawBits;
 }
 
-bool Fixed::operator==(const Fixed & rhs) const
+bool Fixed::operator==(const Fixed &rhs) const
 {
 	return this->_rawBits == rhs._rawBits;
 }
 
-bool Fixed::operator!=(const Fixed & rhs) const
+bool Fixed::operator!=(const Fixed &rhs) const
 {
 	return this->_rawBits != rhs._rawBits;
 }
 
-Fixed Fixed::operator+(const Fixed & rhs) const
+Fixed Fixed::operator+(const Fixed &rhs) const
 {
 	return Fixed(this->toFloat() + rhs.toFloat());
 }
 
-Fixed Fixed::operator-(const Fixed & rhs) const
+Fixed Fixed::operator-(const Fixed &rhs) const
 {
 	return Fixed(this->toFloat() - rhs.toFloat());
 }
 
-Fixed Fixed::operator*(const Fixed & rhs) const
+Fixed Fixed::operator*(const Fixed &rhs) const
 {
 	return Fixed(this->toFloat() * rhs.toFloat());
 }
 
-Fixed Fixed::operator/(const Fixed & rhs) const
+Fixed Fixed::operator/(const Fixed &rhs) const
 {
 	return Fixed(this->toFloat() / rhs.toFloat());
 }
@@ -128,22 +128,22 @@ Fixed Fixed::operator--(int)
 	return tmp;
 }
 
-Fixed &Fixed::min(Fixed & a, Fixed & b)
+Fixed &Fixed::min(Fixed &a, Fixed &b)
 {
 	return (a < b) ? a : b;
 }
 
-const Fixed &Fixed::min(const Fixed & a, const Fixed & b)
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b)
 {
 	return (a < b) ? a : b;
 }
 
-Fixed &Fixed::max(Fixed & a, Fixed & b)
+Fixed &Fixed::max(Fixed &a, Fixed &b)
 {
 	return (a > b) ? a : b;
 }
 
-const Fixed &Fixed::max(const Fixed & a, const Fixed & b)
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b)
 {
 	return (a > b) ? a : b;
 }
