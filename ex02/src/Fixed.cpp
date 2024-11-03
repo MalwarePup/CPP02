@@ -23,7 +23,7 @@ Fixed &Fixed::operator=(const Fixed &rhs)
 {
 	if (this != &rhs)
 	{
-		this->_rawBits = rhs._rawBits;
+		this->_rawBits = rhs.getRawBits();
 	}
 	return *this;
 }
